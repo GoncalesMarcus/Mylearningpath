@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Educacional</title>
+<meta name="description" content="Marcus Gonçales Filho's study path: notebooks of Economic Science, General Knowledge and Foreign Language, taught aloud.">
+<meta name="theme-color" content="#060a18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060a18'/%3E%3Cpath d='M8 22 L16 8 L24 22' stroke='%23e8c987' stroke-width='2' fill='none'/%3E%3Ccircle cx='16' cy='8' r='2.6' fill='%23e8c987'/%3E%3Ccircle cx='8' cy='22' r='2' fill='%2393a3d6'/%3E%3Ccircle cx='24' cy='22' r='2' fill='%2393a3d6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="g" aria-hidden="true"></canvas>
+<div class="center">
+  <h1>Access Box</h1>
+  <div class="search">
+    <input id="q" type="text" autocomplete="off" spellcheck="false" aria-label="Search topics" aria-controls="res">
+    <ul class="results" id="res" role="listbox" hidden></ul>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<main class="roadmap" id="roadmap" aria-hidden="true">
+  <header class="rm-head">
+    <button class="back" id="back">← Access Box</button>
+    <div class="rm-eyebrow">Notebook</div>
+    <h2 id="rm-title"></h2>
+    <p id="rm-desc"></p>
+    <div class="legend">
+      <span><i class="mark"></i>Not started</span>
+      <span><i class="mark s1"></i>Studying</span>
+      <span><i class="mark s2"></i>Lesson recorded</span>
+    </div>
+    <div class="draft">Draft structure, to be rebuilt with you step by step</div>
+  </header>
+  <div class="rm-body" id="rm-body">
+    <svg id="wires" aria-hidden="true"></svg>
+    <div class="rows" id="rows"></div>
+  </div>
+</main>
+
+<aside class="panel" id="panel" aria-hidden="true">
+  <button class="close" id="close" aria-label="Close">×</button>
+  <header>
+    <div class="p-where" id="p-where"></div>
+    <h3 id="p-title"></h3>
+    <span class="chip" id="p-status"></span>
+  </header>
+  <div class="p-body">
+    <section id="p-about-wrap"><h4>About this step</h4><p id="p-about" class="about"></p></section>
+    <section><h4>Lesson</h4><div class="video" id="p-video"></div></section>
+    <section><h4>Study materials</h4><ul class="list" id="p-mat"></ul></section>
+    <section id="p-inside-wrap"><h4>Inside this step</h4><ul class="list" id="p-inside"></ul></section>
+  </div>
+</aside>
+
+<script src="data/notebooks.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
